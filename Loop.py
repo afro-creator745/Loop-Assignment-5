@@ -1,6 +1,5 @@
 #Collatz Conjecture Sequence
-current_num = int(input())   # Log in input
-intial_num = current_num   # saving the intial number to display later
+current_num = int(input("Enter starting number: "))   # Log in input
 steps = 0            #creating necessary variables and lists
 sequence_list = []
 
@@ -16,9 +15,20 @@ while current_num > 0:  # only repeats in the integer input is positive
         current_num += 1
     steps += 1  #Counts how many times the loop repeats
 
-print("Enter starting number:", intial_num) #prints the starting value
 print("Sequence:", end=' ')
 for current_num in sequence_list:    #line 20-22 prints every value collected in the sequence list
     print(current_num, end=' ')
 print('\nSteps:', steps)  #prints the step count on a new line
+
+#Prime Number Checker
+
+current_num = int(input("\nEnter a number: "))
+print('Testing divisors from 2 to', str(current_num-1) + "...")
+for number in range(2, current_num):
+    prime_checker = current_num % number
+    if prime_checker == 0:
+        print(current_num, "is not prime (divisible by", str(number)+ ')')
+        break
+else :
+    print(current_num, "is a prime!")
 
