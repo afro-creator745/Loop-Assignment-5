@@ -374,7 +374,7 @@ def test_10_multiplication_table_format():
     assert has_spacing, (
         "❌ test_10_multiplication_table_format FAILED\n"
         "Table should have formatted spacing for alignment\n\n"
-        "Hint: Use f-strings with width specifiers like f'{num:4}' to align columns.\n"
+        "Hint: Use f-strings with width specifiers like f'{num1:4}' to align columns.\n"
         "Example: print(f'{product:4}', end='') for each product."
     )
 

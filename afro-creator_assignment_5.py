@@ -1,13 +1,15 @@
 """
 COMP 163 - Introduction to Programming
-Assignment: Chapter 4 - College Life Adventure Game
+Assignment: Chapter 5 - Loop Mastery: From Basics to Complex Patterns
 Name: Hakeem Cole
 GitHub Username: afro-creator745
-Date: 2/13/2026
+Date: 2/20/2026
 Description: You'll go through the game to simulate you college experience.
 You'll select your course load and proceed to make decisions that will affect you college success.
 Give it a try a see where you end up.
-AI Usage: None
+AI Usage: AI was used for step 3 to find how to properly align the numbers for the table.
+in particular it taught me how to add spaces inbetween values using f"{row:2}" which adds 2 spaces after displaying
+the row value
 """
 
 
@@ -33,8 +35,8 @@ for current_num in sequence_list:    #line 20-22 prints every value collected in
     print(current_num, end=' ')
 print('\nSteps:', steps)  #prints the step count on a new line
 
-#Prime Number Checker
 
+#Prime Number Checker
 current_num = int(input("\nEnter a number: "))
 print('Testing divisors from 2 to', str(current_num-1) + "...")
 for number in range(2, current_num):
@@ -44,4 +46,19 @@ for number in range(2, current_num):
         break
 else :
     print(current_num, "is a prime!")
+
+
+#Multiplication Table Grid
+print("\nMultiplication Table:")
+print("   ", end='')
+for header_row in range(1, 11):  #prints out the header row for thr table
+   print(f"{header_row:2}", end=" ")
+print()
+for row in range(1, 11):
+    print(f"{row:2}", end=" ")
+    for col in range(1, 11):
+        print(f"{row * col:2}", end=" ")
+    print()
+
+
 
